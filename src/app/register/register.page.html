@@ -1,0 +1,25 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <h4>Registro</h4>
+    <p>Registrate en nuestra APP</p>
+  </div>
+
+  <ion-input placeholder="nombre completo" class="primary-input" id="nombre completo" name="nombre completo" placeholder="Nombre Completo"></ion-input>
+  <ion-input placeholder="usuario" class="primary-input" id="usuario" name="usuario" placeholder="Usuario"></ion-input>
+  <ion-input placeholder="text" class="primary-input" id="correo" name="correo" placeholder="Ingrese su correo"></ion-input>
+  <ion-input placeholder="password" class="primary-input" id="clave" name="clave" placeholder="Ingrese clave"></ion-input>
+  <ion-input placeholder="password" class="primary-input" id="clave" name="repita su clave" placeholder="Repita su clave"></ion-input>
+  <p>Al registrarte estás de acuerdo con nuestra Terminos & Condiciones</p>
+
+  <div class="ion-margin-top">
+    <ion-button expand="block" (click)="register()">Registrarse</ion-button>
+  </div>
+
+  <div class="ion-margin-top ion-text-center">
+    <a (click)="dismiss()">Cerrar</a>
+  </div>
+</ion-content>

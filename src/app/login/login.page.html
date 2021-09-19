@@ -1,0 +1,42 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <h4>Ingresar</h4>
+    <p>Empecemos</p>
+  </div>
+
+  <ion-item>
+    <!-- validaciones de input con html en ionic -->
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input type="text" [(ngModel)]="login.Usuario"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <!--
+      El type Password inmediatamente pasa lo que uno
+      escribe a *****
+    -->
+    <ion-input type="password" [(ngModel)]="login.Password"  maxlength=5 minlength=3></ion-input>
+  </ion-item>
+
+  <!--
+  <ion-input placeholder="Usuario" class="primary-input"></ion-input>
+  <ion-input placeholder="Contraseña" type="password" class="primary-input"></ion-input>
+  -->
+
+  <div class="ion-margin-top ion-text-right forget">
+    <a>Olvidaste tu Contraseña?</a>
+  </div>
+
+  <div class="ion-margin-top">
+    <ion-button shape="block" (click)="ingresar()">INICIAR SESION</ion-button>
+  </div>
+
+  <div class="ion-margin-top ion-text-center">
+    <a (click)="dismiss()">Cerrar</a>
+  </div>
+</ion-content>
