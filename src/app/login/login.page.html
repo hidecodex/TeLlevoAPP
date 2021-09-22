@@ -3,6 +3,8 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  
+
   <div class="title">
     <h4>Ingresar</h4>
     <p>Empecemos</p>
@@ -20,7 +22,7 @@
       El type Password inmediatamente pasa lo que uno
       escribe a *****
     -->
-    <ion-input type="password" [(ngModel)]="login.Password"  maxlength=5 minlength=3></ion-input>
+    <ion-input type="password" [(ngModel)]="login.Password"  maxlength=10 minlength=6></ion-input>
   </ion-item>
 
   <!--
@@ -33,9 +35,9 @@
   </div>
 
   <div class="ion-margin-top">
-    <ion-button shape="block" (click)="ingresar()">INICIAR SESION</ion-button>
+    <ion-button shape="block" (click)="inicio()">INICIAR SESION</ion-button>
   </div>
-
+  
   <div class="ion-margin-top ion-text-center">
     <a (click)="dismiss()">Cerrar</a>
   </div>

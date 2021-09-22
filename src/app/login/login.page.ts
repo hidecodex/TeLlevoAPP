@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, ToastController } from '@ionic/angular';
+import { InicioPage } from '../inicio/inicio.page';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -17,13 +18,15 @@ export class LoginPage implements OnInit {
   constructor(public toastController: ToastController, public modalCtrl: ModalController) {}
   ngOnInit() {}
 
-  ingresar(){
+  inicio(){
+
     if(this.validateModel(this.login)){
-      this.presentToast("Bienvenido");
+      this.Bienvenido();
     }
     else{
       this.presentToast("Falta: "+this.field);
     }
+
   }
   /**
    * validateModel sirve para validar que se ingrese algo en los
@@ -59,5 +62,20 @@ export class LoginPage implements OnInit {
 
   async dismiss() {
     await this.modalCtrl.dismiss();
+  } 
+
+  async Bienvenido() {
+
+    
+    const modal = await this.modalCtrl.create({
+      component: InicioPage,
+      animated: true,
+      mode: 'ios',
+      backdropDismiss: false,
+      cssClass: 'inicio-modal',
+    })
+
+    return await modal.present();
   }
+
 }

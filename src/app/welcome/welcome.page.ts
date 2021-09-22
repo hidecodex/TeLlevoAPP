@@ -40,4 +40,5 @@ export class WelcomePage implements OnInit {
 
     return await modal.present();
   }
+  
 }
